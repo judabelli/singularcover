@@ -1,0 +1,16 @@
+<nav class="c-pagination" role="navigation" aria-label="pagination">
+  <label class="c-sort--select">
+    <div class="c-sort--select-title">
+     Page
+    </div>
+    <div class="c-sort--select-component">
+      <select name="" id=""  (change)="selectPage($event.target.value, $event)">
+        <option *ngFor="let page of pages | async" value="{{page}}" [selected]="page === currentPage">{{page}}</option>
+      </select>
+    </div>
+  </label>
+
+ <div class="c-pagination__total-text">{{totalPages}}</div>
+  <span href="" class=" c-pagination__previous" (click)="selectPage(currentPage - 1, $event)" [class.disabled]="currentPage == 1" title="Go to previous page">&lsaquo;</span>
+  <span class="c-pagination__next" (click)="selectPage(currentPage + 1, $event)" [class.disabled]="currentPage == totalPages" href="" title="Go to next page">&rsaquo;</span>
+</nav>

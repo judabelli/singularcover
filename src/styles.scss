@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+// Reset
+
+html,
+body,
+div,
+form,
+fieldset,
+legend,
+caption,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre
+{
+  font-size: 100%;
+  font-weight: normal;
+
+  margin: 0;
+  padding: 0;
+
+  vertical-align: baseline;
+
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+table
+{
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+th,
+td
+{
+  text-align: left;
+  vertical-align: top;
+}
+
+img
+{
+  border: 0;
+}
+
+img {
+  max-height:50px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Questrial', sans-serif;
+}
+// Custom
+
+.c-products-list {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0;
+  padding:0;
+}
+.c-products__item {
+  flex: 1 1 25%;
+  list-style-type:none;
+  background-color: #f2f2f2;
+  border-width:1px;
+  border-style: solid;
+  margin:15px;
+  padding:24px;
+  border-color:#333;
+}
+h3 {
+  font-family: 'Questrial', sans-serif;
+  font-size:1.2rem;
+}
+.c-price-tag {
+  background-color: #ffec00;
+  color: #282c36;
+  padding: 20px;
+}
