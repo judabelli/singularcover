@@ -13,6 +13,10 @@ export class AppComponent {
   sliceStart = 0;
   sliceEnd = 5;
 
+  decreaseNumbers() {
+    this.sliceStart = (this.sliceStart) - 5;
+    this.sliceEnd = (this.sliceEnd) - 5;
+  }
   increaseNumbers() {
     this.sliceStart = (this.sliceStart) + 5;
     this.sliceEnd = (this.sliceEnd) + 5;

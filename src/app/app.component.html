@@ -30,8 +30,13 @@
     </li>
   </ul>
 
-  <div class="u-right" *ngIf="products.length > sliceEnd">
-    <button (click)="increaseNumbers()"> Next </button>
+  <div class="u-flex">
+    <div *ngIf="sliceStart >= 5">
+      <button (click)="decreaseNumbers()"> Prev </button>
+    </div>
+    <div class="u-right" *ngIf="products.length > sliceEnd">
+      <button (click)="increaseNumbers()"> Next </button>
+    </div>
   </div>
 
 </div>

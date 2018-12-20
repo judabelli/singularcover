@@ -124,7 +124,10 @@ button {
   padding:24px;
   text-align: center;
 }
-.u-right {
-  text-align: right;
-}
 
+.u-flex {
+  display: flex;
+  > .u-right {
+    margin-left: auto;
+  }
+}
