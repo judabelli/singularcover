@@ -29,7 +29,8 @@
       </ng-container>
     </li>
   </ul>
-  <div class="u-right">
+
+  <div class="u-right" *ngIf="products.length > sliceEnd">
     <button (click)="increaseNumbers()"> Next </button>
   </div>
 
