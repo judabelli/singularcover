@@ -7,7 +7,14 @@ import * as insurancesProducts from './InsurProducts.json';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'SingularCover';
   products = insurancesProducts;
+  userFilter: any = { name: '', kind:'', brand: '', price: ''};
+  sliceStart = 0;
+  sliceEnd = 5;
 
+  increaseNumbers() {
+    this.sliceStart = (this.sliceStart) + 5;
+    this.sliceEnd = (this.sliceEnd) + 5;
+  }
 }
