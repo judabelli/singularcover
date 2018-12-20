@@ -1,28 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome to {{ title }}
   </h1>
 </div>
-<h2>Here are some links to help you start: </h2>
+<div class="c-container">
+  <div class="u-centered">
+    <h2>Busca el mejor seguro para ti y los tuyos</h2>
+    <input type="text" [(ngModel)]="userFilter.name" placeholder="Type to filter by name">
+  </div>
 
-<input type="text" [(ngModel)]="userFilter.name" placeholder="Type to filter by name">
+  <ul class="c-products-list">
+    <li *ngFor="let product of products | filterBy: userFilter" class="c-products__item">
+      <ng-container>
+        <div><h3>{{product.name}}</h3></div>
+        <div>
+          <img src="assets/img/{{product.brandImage}}" alt="">
+          <p>{{product.brand}}</p>
+        </div>
+        <div>
+          <img src="assets/img/{{product.kindImage}}" alt="">
+          <p>{{product.kind}}</p>
+        </div>
+        <p class="c-price-tag">{{product.price}}</p>
+      </ng-container>
+    </li>
+  </ul>
 
-<ul class="c-products-list">
-  <li *ngFor="let product of products | filterBy: userFilter" class="c-products__item">
-    <ng-container>
-      <div><h3>{{product.name}}</h3></div>
-      <div>
-        <img src="assets/img/{{product.brandImage}}" alt="">
-        <p>{{product.brand}}</p>
-      </div>
-      <div>
-        <img src="assets/img/{{product.kindImage}}" alt="">
-        <p>{{product.kind}}</p>
-      </div>
-      <p class="c-price-tag">{{product.price}}</p>
-    </ng-container>
-  </li>
-</ul>
-
-
+</div>

@@ -7,7 +7,7 @@ import * as insurancesProducts from './InsurProducts.json';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'SingularCover';
   products = insurancesProducts;
   userFilter: any = { name: '' };
 
